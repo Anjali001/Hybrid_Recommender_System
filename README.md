@@ -4,6 +4,7 @@ It contains 100836 ratings across 9742 movies. These data were created by 610 us
 This project is collectively made by Anjali Pal ,Niranjan Jena, Prakhar Gupta, Satyajit Kumar and  Soumyabrata Ghosh 
 
 OUR APPROACH
+
 Content Filtering Algorithm
 
 Here, we have only taken into account the three movies, the user has provided. 
@@ -16,7 +17,6 @@ Then, we have clubbed the two approaches together to get our final recommendatio
 
 
 REFERENCES:
-REFERENCES
 1. Research Paper:
 	https://dl.acm.org/citation.cfm?id=3052569
 	By: He Xiangnan , Liao Lizi , et.al 
