@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html>
+<title>Temporary</title>
+<style>
+.check
+{
+    opacity:0.5;
+	color:#996;	
+}
+body {
+    padding-top: 40px;
+    background-color:powderblue;
+}
+.movie-tile {
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.movie-tile:hover {
+    background-color: #EEE;
+              cursor: pointer;
+}
+.right1 {
+    float:center
+}
+
+</style>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<script>
+  $(document).ready(function(e){
+    		$(".img-check").click(function(){
+				$(this).toggleClass("check");
+        arr[i] = $(this).val;
+			});
+	});
+</script>
+<div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://127.0.0.1:5000/" >HOME</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/select" >SELECT MOVIE</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/watchtrailer">WATCH TRAILER</a>
+        </div>
+      </div>
+    </div>
+</div>
+   <br>
+<body style="background-color:powderblue;">
+  <div class="container" >
+        <br><br><br><br><br><br>	
+    <h2 style="text-align:center;"> Hi! Welcome to MRE</h2>
+    <h2 style="text-align:center;"> Movie Recommendation Engine </h2>
+    <h3 style="text-align:center;">Here you can get Movie Recommendations and watch Trailers for all types of movies.</h3>
+      
+    <h3 style="text-align:center;">Please click on one of the links on the top to get started</h3>
+  </div>
+  </body>
+  </html>

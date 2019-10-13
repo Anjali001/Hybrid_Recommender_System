@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>Temporary</title>
+<style>
+.check
+{
+    opacity:0.5;
+	color:#996;	
+}
+
+</style>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<script>
+  $(document).ready(function(e){
+    		$(".img-check").click(function(){
+				$(this).toggleClass("check");
+        arr[i] = $(this).val;
+			});
+	});
+</script>
+<div class="container">
+	<div class="row">
+		<form method="post">
+		<div class="form-group">	
+    <div ><label ><img src='Avengers.jpg'  class="img-check"><input type="checkbox" name="chk1" id="item4" value="Avengers" class="hidden" autocomplete="off"></label></div>
+    <div class="col-md-3"><label ><img src="Dark_Knight.jpg" alt="..." class="img-check" height="342" width="200"><input type="checkbox" name="chk2" id="item4" value="Dark_Knight" class="hidden" autocomplete="off"></label></div>
+    <div class="col-md-3"><label ><img src="Fast_And_Furious_6.jpg" alt="..." class="img-check" height="342" width="200"><input type="checkbox" name="chk3" id="item4" value="Fast_And_Furious_6" class="hidden" autocomplete="off"></label></div>
+    <div class="col-md-3"><label ><img src="Deadpool.jpg" alt="..." class="img-check" height="342" width="200"><input type="checkbox" name="chk4" id="item4" value="Deadpool" class="hidden" autocomplete="off"></label></div>
+		</div>
+		<input type="submit" value="Check Item" class="btn btn-success">
+		
+    </form>
+	</div>	
+</div>
+</body>
+</html>
+    

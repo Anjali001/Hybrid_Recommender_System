@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+  <html>
+<title>Temporary</title>
+<style>
+.check
+{
+    opacity:0.5;
+	color:#996;	
+}
+body {
+    padding-top: 40px;
+}
+.movie-tile {
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.movie-tile:hover {
+    background-color: #EEE;
+              cursor: pointer;
+}
+
+</style>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<script>
+  $(document).ready(function(e){
+    		$(".img-check").click(function(){
+				$(this).toggleClass("check");
+        arr[i] = $(this).val;
+			});
+	});
+</script>
+
+<div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="http://127.0.0.1:5000/" >HOME</a>
+          <a class="navbar-brand" href="http://127.0.0.1:5000/select" >SELECT MOVIE</a>
+          <a class="navbar-brand" float:"right" href="http://127.0.0.1:5000/watchtrailer">WATCH TRAILER</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   <br>
+   <body style="background-color:powderblue;">
+<div class="container">	
+  <h2> Please select three movies from the following :</h2>
+  <div class="row">
+		<form method="post">
+		<div class="form-group">	
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Avengers.jpg')}}" alt="Avengers (2012)" class="img-check" height="362" width="260"><input type="checkbox" name="chk1" id="item4" value="Avengers (2012)" class="hidden" autocomplete="off"><h3>Avengers (2012)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Dark_Knight.jpg')}}" alt="Dark Knight (2008)" class="img-check" height="362" width="260"><input type="checkbox" name="chk2" id="item4" value="Dark Knight (2008)" class="hidden" autocomplete="off"><h3>Dark Knight (2008)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Fast_And_Furious_6.jpg')}}" alt="Fast and Furious 6 (2013)" class="img-check" height="362" width="260"><input type="checkbox" name="chk3" id="item4" value="Fast and Furious 6 (2013)" class="hidden" autocomplete="off"><h3>Fast And Furious 6 (2013)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Deadpool.jpg')}}" alt="Deadpool (2016)" class="img-check" height="362" width="260"><input type="checkbox" name="chk4" id="item4" value="Deadpool (2016)" class="hidden" autocomplete="off"><h4>Deadpool (2016)</h4></label></div>
+		
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Avatar.jpg')}}" alt="Avatar (2009)" class="img-check" height="362" width="260"><input type="checkbox" name="chk5" id="item4" value="Avatar (2009)" class="hidden" autocomplete="off"><h4>Avatar (2009)</h4></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Mission_Impossible_Fallout.jpg')}}" alt="Mission: Impossible - Fallout (2018)" class="img-check" height="362" width="260"><input type="checkbox" name="chk6" id="item4" value="Mission: Impossible - Fallout (2018)" class="hidden" autocomplete="off"><h4>Mission Impossible : Fallout (2018)</h4></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Incredibles.jpg')}}" alt="Incredibles (2004)" class="img-check" height="362" width="260"><input type="checkbox" name="chk7" id="item4" value="Incredibles (2004)" class="hidden" autocomplete="off"><h3>Incredibles (2004)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Toy_Story.jpg')}}" alt="Toy Story (1995)" class="img-check" height="362" width="260"><input type="checkbox" name="chk8" id="item4" value="Toy Story (1995)" class="hidden" autocomplete="off"><h3>Toy Story (1995)</h3></label></div>
+    
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Shawshank_Redemption.jpg')}}" alt="Shawshank Redemption (1994)" class="img-check" height="362" width="260"><input type="checkbox" name="chk9" id="item4" value="Shawshank Redemption (1994)" class="hidden" autocomplete="off"><h3>Shawshank Redemption (1994)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Date_And_Switch.jpg')}}" alt="Date and Switch (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk10" id="item4" value="Date and Switch (2014)" class="hidden" autocomplete="off"><h3>Date and Switch (2014)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Playing_It_Cool.jpg')}}" alt="Playing It Cool (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk11" id="item4" value="Playing It Cool (2014)" class="hidden" autocomplete="off"><h3>Playing It Cool (2014)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = '22_Jump_Street.jpg')}}" alt="22 Jump Street (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk12" id="item4" value="22 Jump Street (2014)" class="hidden" autocomplete="off"><h3>22 Jump Street (2014)</h3></label></div>
+    
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Blockers.jpg')}}" alt="Blockers (2018)" class="img-check" height="362" width="260"><input type="checkbox" name="chk13" id="item4" value="Blockers (2018)" class="hidden" autocomplete="off"><h3>Blockers (2018)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Gone_Girl.jpg')}}" alt="Gone Girl (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk14" id="item4" value="Gone Girl (2014)" class="hidden" autocomplete="off"><h3>Gone Girl (2014)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Insidious.jpg')}}" alt="Insidious (2010)" class="img-check" height="362" width="260"><input type="checkbox" name="chk15" id="item4" value="Insidious (2010)" class="hidden" autocomplete="off"><h3>Insidious (2010)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'A_Quiet_Place.png')}}" alt="A Quiet Place (2018)" class="img-check" height="362" width="260"><input type="checkbox" name="chk16" id="item4" value="A Quiet Place (2018)" class="hidden" autocomplete="off"><h4>A Quiet Place(2018)</h4></label></div>
+    
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'The_Theory_of_Everything.jpg')}}" alt="The Theory of Everything (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk17" id="item4" value="The Theory of Everything (2014)" class="hidden" autocomplete="off"><h4>The Theory of Everything (2014)</h4></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Culture_High.jpg')}}" alt="Culture High (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk18" id="item4" value="Culture High (2014)" class="hidden" autocomplete="off"><h4>Culture High (2014)</h4></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'The_Man_Who_Knew_Infinity.jpg')}}" alt="The Man Who Knew Infinity (2016)" class="img-check" height="362" width="260"><input type="checkbox" name="chk19" id="item4" value="The Man Who Knew Infinity (2016)" class="hidden" autocomplete="off"><h4>The Man Who Knew Infinity (2016)</h4></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Rampage.jpg')}}" alt="Rampage (2018)" class="img-check" height="362" width="260"><input type="checkbox" name="chk20" id="item4" value="Rampage (2018)" class="hidden" autocomplete="off"><h4>Rampage (2018)</h4></label></div>
+
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Jurassic_World_2015.jpg')}}" alt="Jurassic World (2015)" class="img-check" height="362" width="260"><input type="checkbox" name="chk21" id="item4" value="Jurassic World (2015)" class="hidden" autocomplete="off"><h4>Jurassic World (2015)</h4></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'War_for_the_planet_of_the_Apes.jpg')}}" alt="War for the Planet of the Apes (2017)" class="img-check" height="362" width="260"><input type="checkbox" name="chk22" id="item4" value="War for the Planet of the Apes (2017)" class="hidden" autocomplete="off"><h4>War for the Planet of the Apes (2017)</h4></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Baywatch.jpg')}}" alt="Baywatch (2017)" class="img-check" height="362" width="260"><input type="checkbox" name="chk23" id="item4" value="Baywatch (2017)" class="hidden" autocomplete="off"><h3>Baywatch (2017)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'The_Mummy_2017.jpg')}}" alt="The Mummy (2017)" class="img-check" height="362" width="260"><input type="checkbox" name="chk24" id="item4" value="The Mummy (2017)" class="hidden" autocomplete="off"><h3>The Mummy(2017)</h3></label></div>
+
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Godzilla_2014.jpg')}}" alt="Godzilla (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk25" id="item4" value="Godzilla (2014)" class="hidden" autocomplete="off"><h3>Godzilla (2014)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'X-Men_Days_Of_Future_Past.jpg')}}" alt="X-Men: Days of Future Past (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk26" id="item4" value="X-Men: Days of Future Past (2014)" class="hidden" autocomplete="off"><h4>X-Men Days of Future Past (2014)</h4></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Neighbors.jpg')}}" alt="Neighbors (2014)" class="img-check" height="362" width="260"><input type="checkbox" name="chk27" id="item4" value="Neighbors (2014)" class="hidden" autocomplete="off"><h3>Neighbors (2014)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Zodiac_2007.jpg')}}" alt="Zodiac (2007)" class="img-check" height="362" width="260"><input type="checkbox" name="chk28" id="item4" value="Zodiac (2007)" class="hidden" autocomplete="off"><h3>Zodiac (2007)</h3></label></div>
+
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'Inception_2010.jpg')}}" alt="Inception (2010)" class="img-check" height="362" width="260"><input type="checkbox" name="chk29" id="item4" value="Inception (2010)" class="hidden" autocomplete="off"><h3>Inception (2010)</h3></label></div>
+    <div class="col-md-4 movie-tile"><label ><img src="{{url_for('static' , filename = 'How_to_Train_Your_Dragon.jpg')}}" alt="How to Train Your Dragon (2010)" class="img-check" height="362" width="260"><input type="checkbox" name="chk30" id="item4" value="How to Train Your Dragon (2010)" class="hidden" autocomplete="off"><h4>How to Train Your Dragon (2010)</h4></label></div>
+
+
+
+  </div>
+		<input type="submit" value="Check Item" class="btn btn-success">
+		
+    </form>
+	</div>	
+</div>
+</body>
+</html>
