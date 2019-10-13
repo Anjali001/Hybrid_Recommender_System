@@ -1,0 +1,223 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>Fresh Tomatoes!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="eOrNdBpGMv8" data-toggle="modal" data-target="#trailer">
+    <img src="Avengers.jpg" width="220" height="342">
+    <h2>Avengers</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="wb49-oV0F78" data-toggle="modal" data-target="#trailer">
+  <img src="Mission_Impossible_Fallout.jpg" width="220" height="342">
+  <h2>Mission Impossible 6</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="5PSNL1qE6VY" data-toggle="modal" data-target="#trailer">
+    <img src="Avatar.jpg" width="220" height="342">
+    <h2>Avatar</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="EXeTwQWrcwY" data-toggle="modal" data-target="#trailer">
+    <img src="Dark_Knight.jpg" width="220" height="342">
+    <h2>Dark Knight</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="FyKWUTwSYAs" data-toggle="modal" data-target="#trailer">
+  <img src="Deadpool.jpg" width="220" height="342">
+  <h2>Deadpool</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="SOKY7XyOHTA" data-toggle="modal" data-target="#trailer">
+  <img src="Incredibles.jpg" width="220" height="342">
+  <h2>Incredibles</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="KYz2wyBy3kc" data-toggle="modal" data-target="#trailer">
+  <img src="Toy_Story.jpg" width="220" height="342">
+  <h2>Toy Story</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="6hB3S9bIaco" data-toggle="modal" data-target="#trailer">
+    <img src="Shawshank_Redemption.jpg" width="220" height="342">
+    <h2>Shawshank Redemption</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="ggehO3r1hMM" data-toggle="modal" data-target="#trailer">
+    <img src="Date_And_Switch.jpg" width="220" height="342">
+    <h2>Date And Switch</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="BQnejVZLQ6w" data-toggle="modal" data-target="#trailer">
+  <img src="Playing_It_Cool.jpg" width="220" height="342">
+  <h2>Playing It Cool </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="v9S_dYuq0vE" data-toggle="modal" data-target="#trailer">
+  <img src="22_Jump_Street.jpg" width="220" height="342">
+  <h2>22 Jump Street </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="RfFcaV5O7SU" data-toggle="modal" data-target="#trailer">
+  <img src="Blockers.jpg" width="220" height="342">
+  <h2>Blockers </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="QZsF7IRTgMQ" data-toggle="modal" data-target="#trailer">
+  <img src="Gone_Girl.jpg" width="220" height="342">
+  <h2>Gone Girl </h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="dKi5XoeTN0k" data-toggle="modal" data-target="#trailer">
+  <img src="Fast_And_Furious_6.jpg" width="220" height="342">
+  <h2>Fast and Furious 6</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zuZnRUcoWos" data-toggle="modal" data-target="#trailer">
+  <img src="Insidious.jpg" width="220" height="342">
+  <h2>Insidious</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="p9wE8dyzEJE" data-toggle="modal" data-target="#trailer">
+  <img src="A_Quiet_Place.png" width="220" height="342">
+  <h2>A Quiet Place</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Salz7uGp72c" data-toggle="modal" data-target="#trailer">
+    <img src="The_Theory_of_Everything.jpg" width="220" height="342">
+    <h2>Theory of Everything</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="cGCraLGvUss" data-toggle="modal" data-target="#trailer">
+  <img src="Culture_High.jpg" width="220" height="342">
+  <h2>Culture High</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="oXGm9Vlfx4w" data-toggle="modal" data-target="#trailer">
+  <img src="The_Man_Who_Knew_Infinity.jpg" width="220" height="342">
+  <h2>The Man Who Knew Infinity</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="coOKvrsmQiI" data-toggle="modal" data-target="#trailer">
+  <img src="Rampage.jpg" width="220" height="342">
+  <h2>Rampage</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="RFinNxS5KN4" data-toggle="modal" data-target="#trailer">
+  <img src="Jurassic_World.jpg" width="220" height="342">
+  <h2>Jurassic World</h2>
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="-4QPVo0UIzc" data-toggle="modal" data-target="#trailer">
+    <img src="https://en.wikipedia.org/wiki/Moneyball_(film)#/media/File:Moneyball_Poster.jpg" width="220" height="342">
+    <h2>Money Ball</h2>
+</div>
+
+
+
+    </div>
+  </body>
+</html>

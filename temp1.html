@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Select Movies</title>
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+var str = "apple";
+    $(document).ready(function() {
+        $("button").click(function(){
+            var favorite = [];
+            $.each($("input[name='movie']:checked"), function(){            
+                favorite.push($(this).val());
+            });
+
+            str = favorite.join(", ");
+           document.getElementById('demo').innerHTML = str.split(",");
+        });
+    });
+</script>
+</head>
+<body>
+
+        <div class="container">
+                <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="#">Movie Selector</a>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+              <div class="container">
+
+        <h2 id='demo'></h2>
+  
+
+        
+
+
+
+
+
+    <form method="get">
+        <h3> Please Select 3 Movies from the following:</h3>
+        
+        <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Avengers.jpg" width="220" height="342"><input type="checkbox" value="Avengers" name="movie">
+                <h2>Avengers</h2>
+        </div>
+
+        <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Mission_Impossible_Fallout.jpg" width="220" height="342"><input type="checkbox" value="Mission_Impossible_Fallout" name="movie">
+                <h2>Mission Impossible 6</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Avatar.jpg" width="220" height="342"><input type="checkbox" value="Avatar" name="movie">
+                <h2>Avatar</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Dark_Knight.jpg" width="220" height="342"><input type="checkbox" value="Dark_Knight" name="movie">
+                <h2>Dark Knight</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Deadpool.jpg" width="220" height="342"><input type="checkbox" value="Deadpool" name="movie">
+                <h2>Deadpool</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Incredibles.jpg" width="220" height="342"><input type="checkbox" value="Incredibles" name="movie">
+                <h2>Incredibles</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Toy_Story.jpg" width="220" height="342"><input type="checkbox" value="Toy_Story" name="movie">
+                <h2>Toy Story</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Shawshank_Redemption.jpg" width="220" height="342"><input type="checkbox" value="Shawshank_Redemption" name="movie">
+                <h2>Shawshank Redemption</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Date_And_Switch.jpg" width="220" height="342"><input type="checkbox" value="Date_And_Switch" name="movie">
+                <h2>Date and Switch</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="Playing_It_Cool.jpg" width="220" height="342"><input type="checkbox" value="Playing_It_Cool" name="movie">
+                <h2>Playing it Cool</h2>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 movie-tile text-center"  data-toggle="modal" >
+                <img src="22_Jump_Street.jpg" width="220" height="342"><input type="checkbox" value="22_Jump_Street" name="movie">
+                <h2>22 Jump Street</h2>
+            </div>
+            
+            
+
+
+
+            <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal">
+                    <img src="Blockers.jpg" width="220" height="342"><input type="checkbox" value="Blockers" name="movie">
+                    <h2>Blockers </h2>
+            </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal">
+                    <img src="Gone_Girl.jpg" width="220" height="342"><input type="checkbox" value="Gone_Girl" name="movie">
+                    <h2>Gone Girl </h2>
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal">
+                    <img src="Fast_And_Furious_6.jpg" width="220" height="342"><input type="checkbox" value="Fast_And_Furious_6" name="movie">
+                    <h2>Fast and Furious 6</h2>
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal">
+                    <img src="Insidious.jpg" width="220" height="342"><input type="checkbox" value="Insidious" name="movie">
+                    <h2>Insidious</h2>
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal" >
+                    <img src="A_Quiet_Place.png" width="220" height="342"><input type="checkbox" value="A_Quiet_Place" name="movie">
+                    <h2>A Quiet Place</h2>
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal" >
+                      <img src="The_Theory_of_Everything.jpg" width="220" height="342"><input type="checkbox" value="The_Theory_of_Everything" name="movie">
+                      <h2>Theory of Everything</h2>
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal" >
+                    <img src="Culture_High.jpg" width="220" height="342"><input type="checkbox" value="Culture_High" name="movie">
+                    <h2>Culture High</h2>
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal" >
+                    <img src="The_Man_Who_Knew_Infinity.jpg" width="220" height="342"><input type="checkbox" value="The_Man_Who_Knew_Infinity" name="movie">
+                    <h2>The Man Who Knew Infinity</h2>
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal" >
+                    <img src="Rampage.jpg" width="220" height="342"><input type="checkbox" value="Rampage" name="movie">
+                    <h2>Rampage</h2>
+                  </div>
+                  
+                  <div class="col-md-6 col-lg-4 movie-tile text-center" data-toggle="modal" >
+                    <img src="Jurassic_World.jpg" width="220" height="342"><input type="checkbox" value="Jurassic_World" name="movie">
+                    <h2>Jurassic World</h2>
+                  </div>
+
+
+
+
+
+        <br>
+        <br>
+        <input type="submit" value="Check Item" >
+        <button type="button">Get Values</button>
+    </form>
+</body>
+</html>
